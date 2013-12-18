@@ -9,4 +9,19 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Lakesofdesolation::Application.config.secret_key_base = '5583888f1b2dc0e2efac6462ed80709a10bccc2db76fff4dfdba1ad88f0832bc86bf1d4f8733ddc5f9497997f04150f03fdcb2d147e4b0add739f5d2c4c06e89'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+Lakesofdesolation::Application.config.secret_key_base = secure_token
