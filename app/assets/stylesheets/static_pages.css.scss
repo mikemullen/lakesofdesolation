@@ -1,3 +1,63 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: grey;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.body-about {
+  background: url('aboutback.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.body-home {
+  background: url('bgimgrt5.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  margin-left: 38%;
+  padding-top: 15px;
+}
+
+.main {
+  position: fixed;
+  font-family: Times, serif;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: 24px;
+  width: 300px;
+  margin-left: 40%;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 1px white;
+  bottom: 0;
+}
+
+.mainquote {
+  position: fixed;
+  font-size: 12px;
+  font-style: italic;
+  width: 400px;
+  margin-left: 50px;
+  margin-top: 500px;
+  background: yellow;
+  padding: 10px;
+  border-radius: 6px;
+}
