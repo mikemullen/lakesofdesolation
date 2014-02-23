@@ -7,18 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="body-<%= yield(:bgname) %>">
-  <header>
-    <div class="navbar">
+    <%= yield %>
+
+  <footer>
+    <div>
     <ul>
-      <li><%= link_to "Home", '#' %></li>
-      <li><%= link_to "About", '#' %></li>
+      <li><%= link_to "About", about_path %></li>
       <li><%= link_to "Hikes", '#' %></li>
       <li><%= link_to "Lakes", '#' %></li>
     </ul>
     </div>
-  </header>
+  </footer>
 
-<%= yield %>
 
 </body>
 </html>

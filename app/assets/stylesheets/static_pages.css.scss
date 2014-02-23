@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 body {
   background: grey;
   -webkit-background-size: cover;
@@ -10,7 +11,57 @@ body {
   background-size: cover;
   margin: 0;
   padding: 0;
+  font-family: Verdana, sans-serif;
 }
+
+/* page titles */
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: .1em;
+  word-spacing: .5em;
+  color: #404040;
+}
+
+/* main text */
+
+p {
+  color: #fffdd3;
+}
+
+/* code for sticky footer */
+
+footer {
+  height: 40px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer ul {
+
+}
+
+footer li {
+  padding: 2px 15px 2px 15px;
+  border: 1px solid #707070;
+  border-radius: 2px;
+}
+
+footer li:hover {
+  background: #d8d8d8;
+}
+
+footer a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #00bfff;
+}
+
+
+
 
 .body-about {
   background: url('aboutback.jpg') no-repeat center center fixed;
@@ -33,8 +84,8 @@ body {
 }
 
 .logo {
-  margin-left: 38%;
-  padding-top: 5px;
+  display: block;
+  margin: 0px auto;
 }
 
 .main {
@@ -97,4 +148,8 @@ ul {
 li {
   display: inline;
   padding: 0px;
+}
+
+.strike {
+  text-decoration: line-through;
 }
