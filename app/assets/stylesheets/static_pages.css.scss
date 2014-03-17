@@ -11,6 +11,7 @@ body {
   background-size: cover;
   margin: 0;
   padding: 0;
+  padding-bottom: 45px;
   font-family: Verdana, sans-serif;
 }
 
@@ -26,8 +27,14 @@ h1 {
 
 /* main text */
 
+.about-text {
+  position: relative;
+  font-size: 14px;
+  color: white;
+  z-index: 5;
+  }
 p {
-  color: #fffdd3;
+  color: white;
 }
 
 /* code for sticky footer */
@@ -58,29 +65,6 @@ footer a {
   text-decoration: none;
   text-transform: uppercase;
   color: #00bfff;
-}
-
-
-
-
-.body-about {
-  background: url('aboutback.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  margin: 0;
-  padding: 0;
-}
-
-.body-home {
-  background: url('bgimgrt5.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  margin: 0;
-  padding: 0;
 }
 
 .logo {

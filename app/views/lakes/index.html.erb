@@ -1,0 +1,17 @@
+<h1>All Lakes</h1>
+
+<% @lakes.each do |lake| %>
+  <% if lake.visited %>
+	<ul class="visited">
+    <li>
+      <%= link_to lake.name, lake %></br>
+    </li>
+    </ul>
+  <% else %>
+	<ul class="unvisited">
+    <li>
+      <%= lake.name %></br>
+    </li>
+    </ul>
+  <% end %>
+<% end %>
