@@ -11,8 +11,20 @@ body {
   background-size: cover;
   margin: 0;
   padding: 0;
+  height: 100%;
   padding-bottom: 45px;
   font-family: Verdana, sans-serif;
+}
+
+/* pushing footer to bottom of page */
+#container {
+   min-height:100%;
+   position:relative;
+}
+
+#body {
+   padding:10px;
+   padding-bottom:60px;   /* Height of the footer */
 }
 
 /* page titles */
@@ -40,8 +52,8 @@ p {
 /* code for sticky footer */
 
 footer {
-  height: 40px;
-  position: fixed;
+  height: 45px;
+  position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
