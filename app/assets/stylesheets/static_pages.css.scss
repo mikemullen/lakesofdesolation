@@ -16,46 +16,28 @@ body {
   font-family: Verdana, sans-serif;
 }
 
-/* pushing footer to bottom of page */
+/* css for bottom footer */
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 #container {
    min-height:100%;
    position:relative;
 }
 
 #body {
-   padding:10px;
-   padding-bottom:60px;   /* Height of the footer */
+   padding: 10px;
+   padding-bottom: 45px;   /* Height of the footer */
 }
-
-/* page titles */
-
-h1 {
-  text-transform: uppercase;
-  text-align: center;
-  line-height: .1em;
-  word-spacing: .5em;
-  color: #404040;
-}
-
-/* main text */
-
-.about-text {
-  position: relative;
-  font-size: 14px;
-  color: white;
-  z-index: 5;
-  }
-p {
-  color: white;
-}
-
-/* code for sticky footer */
-
-footer {
-  height: 45px;
+#footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+  height: 45px;   /* Height of the footer */
   text-align: center;
 }
 
@@ -77,6 +59,29 @@ footer a {
   text-decoration: none;
   text-transform: uppercase;
   color: #00bfff;
+}
+
+/* page titles */
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: .1em;
+  word-spacing: .5em;
+  color: #404040;
+}
+
+/* main text */
+
+.about-text {
+  position: relative;
+  font-size: 14px;
+  color: white;
+  z-index: 5;
+  }
+
+p {
+  color: white;
 }
 
 .logo {
