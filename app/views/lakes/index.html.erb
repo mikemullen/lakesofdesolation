@@ -5,7 +5,7 @@
 
 <ul class="column1of2 trans">
 <h2 class="topored">Visited Lakes</h2>
-<% @lakes.find_each do |lake| %>
+<% @lakessorted.each do |lake| %>
   <% if lake.visited %>
   <li>
     <span class="lakes"><%= link_to lake.name, lake %></span></br>

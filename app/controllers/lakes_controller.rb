@@ -5,6 +5,7 @@ class LakesController < ApplicationController
 
   def index
     @lakes = Lake.all
+    @lakessorted = @lakes.sort_by { |l| l.alphaname }
   end
 
   def create
@@ -23,7 +24,7 @@ class LakesController < ApplicationController
 
   def update
     @lake = Lake.find(params[:id])
-    if @lake.update(params[:lake].permit(:filename, :visited))
+    if @lake.update(params[:lake].permit(:name, :filename, :visited, :alphaname))
       redirect_to @lake
     else
       render 'edit'
@@ -32,7 +33,7 @@ class LakesController < ApplicationController
 
   private
     def lake_params
-    	params.require(:lake).permit(:name, :slug, :filename, :visited)
+    	params.require(:lake).permit(:name, :slug, :filename, :visited, :alphaname)
     end
 
 end

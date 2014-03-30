@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140315225233) do
+ActiveRecord::Schema.define(version: 20140330230715) do
 
   create_table "lakes", force: true do |t|
     t.string   "name"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20140315225233) do
     t.datetime "updated_at"
     t.string   "filename"
     t.boolean  "visited"
+    t.string   "sortname"
+    t.string   "alphaname"
   end
 
 end
