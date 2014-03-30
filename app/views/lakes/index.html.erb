@@ -1,17 +1,27 @@
-<h1>All Lakes</h1>
+<% provide(:title, 'All Lakes') %>
+<% provide(:file_name, 'map.jpg') %>
 
-<% @lakes.each do |lake| %>
+<h1 class="topored">All Lakes</h1>
+
+<ul class="column1of2 trans">
+<h2 class="topored">Visited Lakes</h2>
+<% @lakes.find_each do |lake| %>
   <% if lake.visited %>
-	<ul class="visited">
-    <li>
-      <%= link_to lake.name, lake %></br>
-    </li>
-    </ul>
-  <% else %>
-	<ul class="unvisited">
-    <li>
-      <%= lake.name %></br>
-    </li>
-    </ul>
+  <li>
+    <span class="lakes"><%= link_to lake.name, lake %></span></br>
+  </li>  
   <% end %>
 <% end %>
+</ul>
+
+<ul class="column2of2 trans">
+<h2 class="topored">Unvisited Lakes</h2>
+<% @lakes.find_each do |lake| %>
+  <% if lake.visited %>
+  <li>
+  <% else %>
+    <span class="lakes"><%= lake.name %></span></br>
+  </li>  
+  <% end %>
+<% end %>
+</ul>
