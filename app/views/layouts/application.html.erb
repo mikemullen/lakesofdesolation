@@ -13,7 +13,14 @@
 <body>
 
   <div id="container">
-    <div id="body"><%= yield %></div>
+
+    <div id="body">
+      <% unless current_page?(root_path) %>
+      <div class="homebutton"><%= link_to image_tag("ldbadge.png", size: "50x50", alt: "Home button"), root_path %></div>
+      <% end %>
+
+    <%= yield %>
+    </div>
 
     <div id="footer">
       <footer>
