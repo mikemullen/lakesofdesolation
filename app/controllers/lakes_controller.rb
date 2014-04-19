@@ -15,16 +15,22 @@ class LakesController < ApplicationController
   end
 
   def show
-  	@lake = Lake.find(params[:id])
+  	@lake = Lake.friendly.find(params[:id])
+    if request.path != lake_path(@lake)
+      redirect_to @lake, status: :moved_permanently
+    end
+    @lakes = Lake.all
+    @lakessorted = @lakes.sort_by { |l| l.alphaname }
+    @lakesvisited = @lakessorted.each { |l| l.visited = true }
   end
 
   def edit
-    @lake = Lake.find(params[:id])
+    @lake = Lake.friendly.find(params[:id])
   end
 
   def update
-    @lake = Lake.find(params[:id])
-    if @lake.update(params[:lake].permit(:name, :filename, :visited, :alphaname))
+    @lake = Lake.friendly.find(params[:id])
+    if @lake.update(lake_params)
       redirect_to @lake
     else
       render 'edit'
