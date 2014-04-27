@@ -6,7 +6,7 @@
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <style><%= bg_img(yield(:file_name)) %></style>
+  <style type="text/css"><%= bg_img(yield(:file_name)) %></style>
  
 </head>
 

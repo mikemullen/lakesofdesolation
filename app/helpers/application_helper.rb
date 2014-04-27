@@ -20,8 +20,9 @@ module ApplicationHelper
 	if file_name.empty?
 	  fall_back
 	else
+    pic_path = asset_url(file_name)
 	  			"body {
-  					background: url(/assets/#{file_name}) no-repeat center center fixed;
+  					background: url(#{pic_path}) no-repeat center center fixed;
   					-webkit-background-size: cover;
   					-moz-background-size: cover;
   					-o-background-size: cover;
