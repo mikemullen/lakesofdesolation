@@ -49,7 +49,7 @@ footer li {
   padding: 2px 15px 2px 15px;
   border: 1px solid #707070;
   border-radius: 2px;
-  background: url(/assets/bg15.png) repeat;
+  background: asset_url('bg15.png') repeat;
 }
 
 footer li:hover {
@@ -218,7 +218,7 @@ li {
 /* transparent background */
 
 .trans {
-  background: url(/assets/bgw50.png) repeat;
+  background: asset_url('bgw50.png') repeat;
 }
 
 /* Logo line experimental */
