@@ -2,6 +2,10 @@
 <div>
   <%= image_tag("clogo.png", size: "225x50", alt: "Home button") %>
 </div>
+
+<% if signed_in? %>
+  <%= link_to "Sign out", signout_path, method: "delete" %>
+<% end %>
 <!--<div>
   <%= image_tag("newlogo.png", size: "288x72", alt: "The Lakes of Desolation Logo", class: "logo") %>
 </div> -->

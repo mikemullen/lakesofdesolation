@@ -1,3 +1,7 @@
 <% provide(:title, @lake.name) %>
 <% provide(:file_name, @lake.filename) %>
 <h1><%= @lake.name %></h1>
+<% if signed_in? %>
+<%= link_to "delete", @lake, method: :delete, data: { confirm: "You sure?" } %> | 
+<%= link_to "edit", edit_lake_path(@lake) %>
+<% end %>

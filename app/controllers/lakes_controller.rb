@@ -1,4 +1,5 @@
 class LakesController < ApplicationController
+  before_action :signed_in_user, only: [:edit, :update, :create, :destroy, :new]
 
   def new
   end
@@ -37,9 +38,18 @@ class LakesController < ApplicationController
     end
   end
 
+  def destroy
+    Lake.friendly.find(params[:id]).destroy
+    redirect_to lakes_url
+  end
+
   private
     def lake_params
     	params.require(:lake).permit(:name, :slug, :filename, :visited, :alphaname)
+    end
+
+    def signed_in_user
+      redirect_to signin_url, notice: "Please sign in." unless signed_in?
     end
 
 end
