@@ -22,7 +22,6 @@ class LakesController < ApplicationController
     end
     @lakes = Lake.all
     @lakessorted = @lakes.sort_by { |l| l.alphaname }
-    @lakesvisited = @lakessorted.each { |l| l.visited = true }
   end
 
   def edit

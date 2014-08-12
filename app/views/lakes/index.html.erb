@@ -16,12 +16,11 @@
 
 <ul class="column2of2 trans">
 <h2 class="topored">Unvisited Lakes</h2>
-<% @lakes.find_each do |lake| %>
-  <% if lake.visited %>
+<% @lakessorted.each do |lake| %>
+  <% unless lake.visited %>
   <li>
-  <% else %>
     <span class="lakes"><%= lake.name %></span></br>
-  </li>  
+  </li>
   <% end %>
 <% end %>
 </ul>
