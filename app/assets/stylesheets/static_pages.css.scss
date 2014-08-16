@@ -232,3 +232,31 @@ li {
 .homebutton {
   float: left;
 }
+
+/* Prev Next Buttons */
+
+#nextbutton:empty {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: asset_url('nextoff.png');
+  background-size: 40px 40px;
+  right: 10px;
+  top: 50%;
+}
+#nextbutton:hover {
+  background-image: asset_url('nexton.png')
+}
+
+#prevbutton:empty {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: asset_url('prevoff.png');
+  background-size: 40px 40px;
+  left: 10px;
+  top: 50%;
+}
+#prevbutton:hover {
+  background-image: asset_url('prevon.png')
+}

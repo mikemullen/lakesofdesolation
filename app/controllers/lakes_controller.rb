@@ -22,6 +22,23 @@ class LakesController < ApplicationController
     end
     @lakes = Lake.all
     @lakessorted = @lakes.sort_by { |l| l.alphaname }
+    @lakesvisited = @lakessorted.delete_if { |l| l.visited == false }
+    @maxindex = @lakesvisited.count - 1
+    @lakeindexpoint = @lakesvisited.find_index { |l| l.name == @lake.name }
+    @prevlakeindex = @lakeindexpoint - 1
+    @prevlake = @lakesvisited[@prevlakeindex]
+    if @lakeindexpoint == @maxindex
+      @nextlakeindex = 0
+      @nextlake = @lakesvisited[@nextlakeindex]
+    else
+      @nextlakeindex = @lakeindexpoint + 1
+      @nextlake = @lakesvisited[@nextlakeindex]
+    end
+    
+    #@lakeid = @lake.id
+    #currentlakeindex = @lakesvisited.index(lakeid)
+    #nextlakeindex = currentlakeindex
+    #@nextlake = @lakesvisited[nextlakeindex]
   end
 
   def edit
