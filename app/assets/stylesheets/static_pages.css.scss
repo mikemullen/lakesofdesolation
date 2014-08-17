@@ -124,6 +124,7 @@ p {
   margin: 50px auto 0 auto;
   padding: 10px;
   border-radius: 6px;
+  min-height: 85%;
 }
 
 .mainquote {
@@ -140,7 +141,7 @@ p {
   left:0px;
   width:100%;
   height:100%;
-  background-color: asset_url('loader.gif') no-repeat;
+  background-color: black;
   border-radius: 6px;
   z-index:1;
   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
@@ -185,7 +186,7 @@ li {
 }
 
 .column2of2 {
-  float: left;
+  float: right;
   width: 24%;
   text-align: center;
   border: 1px #94726e solid;
@@ -193,6 +194,13 @@ li {
   margin-left: 13%;
   margin-right: 12%;
   padding-bottom: 10px;
+}
+
+/* to contain floating columns and push down the bottom nav bar */
+.columnwrap {
+  position: relative;
+  overflow: auto;
+  width: 100%;
 }
 
 /* lakes page styles */
@@ -259,4 +267,17 @@ li {
 }
 #prevbutton:hover {
   background-image: asset_url('prevon.png')
+}
+
+/* Home Button */
+
+#homebutton:empty {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: asset_url('logooff.png');
+  background-size: 40px 40px;
+}
+#homebutton:hover {
+  background-image: asset_url('logoon.png')
 }

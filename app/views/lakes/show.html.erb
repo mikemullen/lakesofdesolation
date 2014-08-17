@@ -1,15 +1,6 @@
 <% provide(:title, @lake.name) %>
 <% provide(:file_name, @lake.filename) %>
 <h1><%= @lake.name %></h1>
-
-<!-- <% @lakesvisited.each do |lake| %>
-  <li>
-    <span class="lakes"><%= link_to lake.name, lake %></span></br>
-  </li>  
-<% end %>
-<h2>Index <%= @lakeindexpoint %> Next Index Point <%= @nextlakeindex %> Max Index <%= @maxindex %> Next Lake Name <%= link_to @nextlake.name, @nextlake %></h2>
-<h2>Prev Lake Name <%= link_to @prevlake.name, @prevlake %></h2>
--->
 <%= link_to(@prevlake) do %>
    <div id="prevbutton"></div>
 <% end %>

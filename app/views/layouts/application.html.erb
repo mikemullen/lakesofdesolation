@@ -11,15 +11,19 @@
 </head>
 
 <body>
-
+    
   <div id="container">
 
     <div id="body">
       <% unless current_page?(root_path) %>
-      <div class="homebutton"><%= link_to image_tag("logooff.png", size: "40x40", alt: "Home button"), root_path %></div>
+
+        <%= link_to(root_path) do %>
+          <div id="homebutton"></div>
+        <% end %>
+
       <% end %>
 
-    <%= yield %>
+      <%= yield %>
     </div>
 
     <div id="footer">
