@@ -1,0 +1,28 @@
+<% provide(:title, "Notes" ) %>
+<% provide(:file_name, "notebg.jpg") %>
+
+    <h1 class="note">Notes</h1>
+<div class="columnwrap">
+<div class="container transb">
+
+
+<% @notes.each do |note| %>
+    <div class="notepic">
+      <% if note.photo_file_name %>
+  	  <%= link_to image_tag(note.photo.url(:medium)), note %>
+      <% end %>
+  	  <div class="toptext">
+  	  <%= link_to note.title, note %>
+  	  <em><%= note.sort_date.to_formatted_s(:long_ordinal) %></em><br />
+      </div>
+  	</div>
+    <div class="teaser">
+      <%= raw note.text.truncate(80, separator: ' ') %>
+      <%= link_to "Continue", note %>
+    </div>
+    <% unless @lastnoteid == note.id %>
+      <hr><br />
+    <% end %>
+<% end %>
+</div>
+</div>

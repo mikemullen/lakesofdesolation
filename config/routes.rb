@@ -1,6 +1,7 @@
 Lakesofdesolation::Application.routes.draw do
 
   resources :lakes
+  resources :notes
   resources :sessions , only: [:new, :create, :destroy]
   
   root 'static_pages#home'

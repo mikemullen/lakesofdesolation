@@ -16,6 +16,18 @@ body {
   font-family: Verdana, Geneva, sans-serif;
 }
 
+/* General sytles */
+
+a {
+  text-decoration: none;
+  color: #00bfff; 
+}
+
+a:hover {
+  text-decoration: none;
+  color: #006485;
+}
+
 /* css for bottom footer */
 
 html {
@@ -69,14 +81,15 @@ h1 {
   font-family: "Lucida Bright", Georgia, serif;
   text-transform: uppercase;
   text-align: center;
-  line-height: .1em;
+  line-height: 1em;
   word-spacing: .3em;
   color: #606060;
+  font-size: 250%;
 }
 
 h2 {
   font-family: "Lucida Bright", Georgia, serif;
-  line-height: .1em;
+  line-height: 1em;
   word-spacing: .3em;
   color: #606060;
 }
@@ -91,9 +104,12 @@ h2 {
 
 .about-text {
   position: relative;
-  
   color: white;
   z-index: 5;
+}
+
+.about {
+  color: silver;  
 }
 
 p {
@@ -121,10 +137,10 @@ p {
 .container {
   position: relative;
   width: 66%;
+  max-width: 800px;
   margin: 50px auto 0 auto;
   padding: 10px;
   border-radius: 6px;
-  min-height: 85%;
 }
 
 .mainquote {
@@ -133,20 +149,6 @@ p {
   font-style: italic;
   color: white;
   z-index: 5;
-}
-
-.background {
-  position:absolute;
-  top:0px;
-  left:0px;
-  width:100%;
-  height:100%;
-  background-color: black;
-  border-radius: 6px;
-  z-index:1;
-  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  opacity:.50;
 }
 
 .navbar {
@@ -228,6 +230,10 @@ li {
   background: asset_url('bgw50.png') repeat;
 }
 
+.transb {
+  background: asset_url('bg50.png') repeat;
+}
+
 /* Logo line experimental */
 
 .logoline {
@@ -280,4 +286,36 @@ li {
 }
 #homebutton:hover {
   background-image: asset_url('logoon.png')
+}
+
+/* Note styles */
+
+.notepic {
+  position: relative;
+  width: 400px;
+  margin: auto;
+}
+
+.toptext {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 10px;
+  width: 380px;
+  background: asset_url('bgw50.png') repeat;
+}
+
+.teaser {
+  position: relative;
+  width: 400px;
+  margin: auto;
+  color: white;
+}
+
+.noteimg {
+  max-width: 100%;
+}
+
+.note {
+  color: #ffb400;
 }
