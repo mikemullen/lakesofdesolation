@@ -2,6 +2,8 @@ class Note < ActiveRecord::Base
   has_attached_file :photo, :styles => { :large => "800>", :medium => "400>", :thumb => "100>" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :photo, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   default_scope -> { order('sort_date DESC') }
+  has_many :note_images, dependent: :destroy
+  accepts_nested_attributes_for :note_images
 
   extend FriendlyId
   friendly_id :slug_candidates, use: [:slugged, :history]

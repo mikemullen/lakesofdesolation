@@ -1,6 +1,8 @@
 class NotesController < ApplicationController
 
   def new
+    @note = Note.new
+    @note.note_images.build
   end
 
   def create
@@ -11,6 +13,7 @@ class NotesController < ApplicationController
 
   def edit
   	@note = Note.friendly.find(params[:id])
+    @note.note_images.build
   end
 
   def update
@@ -42,7 +45,7 @@ class NotesController < ApplicationController
 
   private
     def note_params
-      params.require(:note).permit(:sort_date, :author, :title, :text, :photo, :imgcap)
+      params.require(:note).permit(:id, :sort_date, :author, :title, :text, :photo, :imgcap, note_image_attributes: [ :id, :note_image, :caption, :note_id ])
     end
 
 end

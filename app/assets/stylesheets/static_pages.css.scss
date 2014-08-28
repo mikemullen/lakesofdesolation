@@ -28,6 +28,18 @@ a:hover {
   color: #006485;
 }
 
+.headline {
+  display: block;
+  color: #606060;
+  margin: 0 auto 10px auto;
+  font-family: "Lucida Bright", Georgia, serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1em;
+  font-size: 3em;
+  font-weight: bold;
+}
+
 /* css for bottom footer */
 
 html {
@@ -61,7 +73,7 @@ footer li {
   padding: 2px 15px 2px 15px;
   border: 1px solid #707070;
   border-radius: 2px;
-  background: asset_url('bg15.png') repeat;
+  background: asset_url('bgw90.png') repeat;
 }
 
 footer li:hover {
@@ -82,7 +94,6 @@ h1 {
   text-transform: uppercase;
   text-align: center;
   line-height: 1em;
-  word-spacing: .3em;
   color: #606060;
   font-size: 250%;
 }
@@ -90,7 +101,6 @@ h1 {
 h2 {
   font-family: "Lucida Bright", Georgia, serif;
   line-height: 1em;
-  word-spacing: .3em;
   color: #606060;
 }
 
@@ -138,8 +148,8 @@ p {
   position: relative;
   width: 66%;
   max-width: 800px;
-  margin: 50px auto 0 auto;
-  padding: 10px;
+  margin: 0 auto 0 auto;
+  padding: 5px 10px 10px 10px;
   border-radius: 6px;
 }
 
@@ -234,6 +244,10 @@ li {
   background: asset_url('bg50.png') repeat;
 }
 
+.transbd {
+  background: asset_url('bg90.png') repeat;
+}
+
 /* Logo line experimental */
 
 .logoline {
@@ -302,7 +316,7 @@ li {
   left: 0px;
   padding: 10px;
   width: 380px;
-  background: asset_url('bgw50.png') repeat;
+  background: asset_url('bgw90.png') repeat;
 }
 
 .teaser {
@@ -316,6 +330,16 @@ li {
   max-width: 100%;
 }
 
+
 .note {
   color: #ffb400;
+}
+
+.quote {
+  position: relative;
+  left: 50px;
+  font-style: italic;
+  font-size: .8em;
+  width: 90%;
+
 }

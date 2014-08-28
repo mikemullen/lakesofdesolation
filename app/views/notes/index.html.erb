@@ -1,11 +1,11 @@
 <% provide(:title, "Notes" ) %>
-<% provide(:file_name, "notebg.jpg") %>
+<% provide(:file_name, "notebgalt.jpg") %>
 
-    <h1 class="note">Notes</h1>
+
+
+<div class="container transbd">
 <div class="columnwrap">
-<div class="container transb">
-
-
+    <span class="headline note">Notes</span>
 <% @notes.each do |note| %>
     <div class="notepic">
       <% if note.photo_file_name %>

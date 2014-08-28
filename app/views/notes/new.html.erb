@@ -21,7 +21,7 @@
 
         <p>
           <%= f.label :text %><br />
-          <%= f.text_area :text, size: "120x15" %>
+          <%= f.text_area :text, size: "120x2" %>
         </p>
 
         <p>
@@ -32,6 +32,17 @@
         <p>
           <%= f.file_field :photo %>
         </p>
+
+        <%= f.fields_for :note_images, :html => { :multipart => true } do |builder| %>
+
+        <p>
+        <%= builder.label :caption, "Alternative Image Caption" %>
+        <%= builder.text_field :caption %>
+        <%= builder.label :image, "Image File" %>
+        <%= builder.file_field :image %>
+        </p>
+
+        <% end %>
 
         <p>
           <%= f.submit "Post", class: "btn btn-primary" %>
