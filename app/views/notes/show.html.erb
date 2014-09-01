@@ -8,7 +8,7 @@
 <span class="headline note"><%= @note.title %></span>
 <% if @note.photo_file_name %>
 	<p class="pull-right art-img">
-	  <%= image_tag @note.photo.url(:large), class: "noteimg" %><br />
+	  <%= image_tag @note.photo.url(:xlarge), class: "noteimg" %><br />
 	  <small><em><%= @note.imgcap %></em></small>
 	</p>
   <% end %>
