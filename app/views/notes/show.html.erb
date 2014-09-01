@@ -1,11 +1,10 @@
 <% provide(:title, @note.title ) %>
-<% provide(:file_name, "notebgalt.jpg") %>
-
-
-
-<div class="container transbd">
+<% provide(:file_name, "notebg.jpg") %>
 <div class="columnwrap">
-<span class="headline note"><%= @note.title %></span>
+<div class="container transb">
+
+	<h3><%= @note.title %><br /></h3>
+
 <% if @note.photo_file_name %>
 	<p class="pull-right art-img">
 	  <%= image_tag @note.photo.url(:xlarge), class: "noteimg" %><br />
@@ -19,8 +18,6 @@
 	  <%= @note.author %> | <small>Added <%= time_ago_in_words(@note.sort_date) %> ago.</small><br />
 	  <%= simple_format raw @note.text %><br />
 	</p>
-
-	
 
 	<p class="text-center">
 	  <%= link_to "Back to All Notes", notes_url %>

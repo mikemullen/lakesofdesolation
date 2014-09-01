@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140819180626) do
+ActiveRecord::Schema.define(version: 20140818194805) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -38,17 +38,6 @@ ActiveRecord::Schema.define(version: 20140819180626) do
   end
 
   add_index "lakes", ["slug"], name: "index_lakes_on_slug"
-
-  create_table "note_images", force: true do |t|
-    t.string   "caption"
-    t.integer  "note_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-  end
 
   create_table "notes", force: true do |t|
     t.string   "title"
