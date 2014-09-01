@@ -1,9 +1,9 @@
 <% provide(:title, @note.title ) %>
-<% provide(:file_name, "notebg.jpg") %>
-<div class="columnwrap">
-<div class="container transb">
+<% provide(:file_name, "notebgalt.jpg") %>
 
-	<h3><%= @note.title %><br /></h3>
+<div class="container transbd">
+<div class="columnwrap">
+<span class="headline note"><%= @note.title %></span>
 
 <% if @note.photo_file_name %>
 	<p class="pull-right art-img">
