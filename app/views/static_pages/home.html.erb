@@ -1,7 +1,4 @@
 <% provide(:file_name, 'bgimgrt5.jpg') %>
-<div>
-  <%= image_tag("logo.png", size: "430x40", alt: "Home button") %>
-</div>
 
 <% if signed_in? %>
   <%= link_to "Sign out", signout_path, method: "delete" %>
