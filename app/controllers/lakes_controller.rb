@@ -35,6 +35,7 @@ class LakesController < ApplicationController
       @nextlake = @lakesvisited[@nextlakeindex]
     end
     
+    
     #@lakeid = @lake.id
     #currentlakeindex = @lakesvisited.index(lakeid)
     #nextlakeindex = currentlakeindex
