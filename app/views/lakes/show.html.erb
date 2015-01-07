@@ -1,6 +1,19 @@
 <% provide(:title, @lake.name) %>
 <% provide(:file_name, @lake.filename) %>
-<span class="headline"><%= @lake.name %></span>
+
+<p class="largelaketitle"><%= @lake.name %></p>
+<ul class="laketitle">
+<% if @lake.hikedate %>
+<li><%= @lake.hikedate.to_formatted_s(:rfc822) %></li>
+<% end %>
+<% if @lake.elevation %>
+<li><%= @lake.elevation %>'</li>
+<% end %>
+<% if @lake.infolink %>
+<li><%= link_to "note", note_path(@lake.infolink) %></li>
+<% end %>
+</ul>
+
 <%= link_to(@prevlake) do %>
    <div id="prevbutton"></div>
 <% end %>

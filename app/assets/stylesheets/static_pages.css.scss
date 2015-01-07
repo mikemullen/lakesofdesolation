@@ -32,12 +32,29 @@ a:hover {
   display: block;
   color: #606060;
   margin: 0 auto 10px auto;
-  font-family: "Lucida Bright", Georgia, serif;
+  font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
   text-transform: uppercase;
   text-align: center;
   line-height: 1em;
   font-size: 3em;
   font-weight: bold;
+}
+
+.logoline {
+  display: block;
+  color: #e0e0e0;
+  margin: 5px auto 5px auto;
+  font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1em;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.small {
+  font-size: 1.25em;
+  margin-top: 15px;
 }
 
 /* css for bottom footer */
@@ -54,7 +71,7 @@ html {
 }
 
 #body {
-   padding: 10px;
+   padding: 5px;
    padding-bottom: 45px;   /* Height of the footer */
 }
 #footer {
@@ -84,6 +101,37 @@ footer a {
   text-decoration: none;
   text-transform: uppercase;
   color: #00bfff;
+}
+
+/* lake titles */
+
+.laketitle {
+  font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  color: #606060;
+}
+
+.laketitle li {
+  padding: 2px 15px 2px 15px;
+
+  border-radius: 2px;
+  font-size: 75%;
+  background: asset_url('bgw50.png') repeat;
+}
+
+.largelaketitle {
+  font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 0;
+  margin-bottom: -2px;
+  margin-top: 20px;
+  color: #606060;
+  font-size: 200%;
+  font-weight: bold;
+  border: none;
 }
 
 /* page titles */
@@ -246,12 +294,6 @@ li {
 
 .transbd {
   background: asset_url('bg90.png') repeat;
-}
-
-/* Logo line experimental */
-
-.logoline {
-  
 }
 
 /* Home Button */
