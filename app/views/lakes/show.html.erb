@@ -3,13 +3,13 @@
 
 <p class="largelaketitle"><%= @lake.name %></p>
 <ul class="laketitle">
-<% if @lake.hikedate %>
+<% if @lake.hikedate.present? %>
 <li><%= @lake.hikedate.to_formatted_s(:rfc822) %></li>
 <% end %>
-<% if @lake.elevation %>
+<% if @lake.elevation.present? %>
 <li><%= @lake.elevation %>'</li>
 <% end %>
-<% if @lake.infolink %>
+<% if @lake.infolink.present? %>
 <li><%= link_to "note", note_path(@lake.infolink) %></li>
 <% end %>
 </ul>
