@@ -1,6 +1,10 @@
 <% provide(:file_name, randlake.filename ) %>
-<span class="logoline small">Welcome to the</span>
-<span class="logoline">Lakes of Desolation Wilderness</span>
+<ul class="logoline small">
+<li>Welcome to the</li>
+</ul>
+<ul class="logoline">
+<li>Lakes of Desolation Wilderness</li>
+</ul>
 <% if signed_in? %>
   <%= link_to "Sign out", signout_path, method: "delete" %>
 <% end %>

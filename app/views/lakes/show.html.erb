@@ -1,7 +1,8 @@
 <% provide(:title, @lake.name) %>
 <% provide(:file_name, @lake.filename) %>
-
-<p class="largelaketitle"><%= @lake.name %></p>
+<ul class="laketitle largelaketitle">
+<li class="largelaketitle"><%= @lake.name %></li>
+</ul>
 <ul class="laketitle">
 <% if @lake.hikedate.present? %>
 <li><%= @lake.hikedate.to_formatted_s(:rfc822) %></li>
