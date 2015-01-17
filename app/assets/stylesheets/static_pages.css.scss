@@ -243,25 +243,36 @@ li {
 
 /* colum set up */
 
-.column1of2 {
+.column1of3 {
   float: left;
-  width: 24%;
+  width: 25%;
   text-align: center;
   border: 1px #94726e solid;
   border-radius: 6px;
-  margin-left: 13%;
-  margin-right: 13%;
+  margin-left: 6%;
+  margin-right: 3%;
   padding-bottom: 10px;
 }
 
-.column2of2 {
-  float: right;
-  width: 24%;
+.column2of3 {
+  width: 25%;
+  float: left;
   text-align: center;
   border: 1px #94726e solid;
   border-radius: 6px;
-  margin-left: 13%;
-  margin-right: 12%;
+  margin-left: 3%;
+  margin-right: 3%;
+  padding-bottom: 10px;
+}
+
+.column3of3 {
+  float: left;
+  width: 25%;
+  text-align: center;
+  border: 1px #94726e solid;
+  border-radius: 6px;
+  margin-left: 3%;
+  margin-right: 5%;
   padding-bottom: 10px;
 }
 
