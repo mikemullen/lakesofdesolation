@@ -1,10 +1,10 @@
 <% provide(:title, 'All Lakes') %>
 <% provide(:file_name, 'map.jpg') %>
 
-<span class="headline topored">All Lakes</span>
+<span class="headline topored">Lakes</span>
 <div class="columnwrap">
 <ul class="column1of3 trans">
-<h2 class="topored">Visited Lakes</h2>
+<h2 class="topored">Visited</h2>
 <% @lakessorted.each do |lake| %>
   <% if lake.visited %>
   <li>
@@ -15,7 +15,7 @@
 </ul>
 
 <ul class="column2of3 trans">
-<h2 class="topored">Nameless Lakes | <%= link_to "info", note_path("nameless-lakes") %></h2>
+<h2 class="topored">Nameless | <%= link_to "info", note_path("nameless-lakes") %></h2>
 <% @lakessorted.each do |lake| %>
   <% if lake.nameless %>
   <li>
@@ -26,7 +26,7 @@
 </ul>
 
 <ul class="column3of3 trans">
-<h2 class="topored">Unvisited Lakes</h2>
+<h2 class="topored">Unvisited</h2>
 <% @lakessorted.each do |lake| %>
   <% unless lake.visited or lake.nameless %>
   <li>
