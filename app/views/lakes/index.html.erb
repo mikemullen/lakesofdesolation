@@ -4,35 +4,32 @@
 <span class="headline topored">Lakes</span>
 <div class="columnwrap">
 <ul class="column1of3 trans">
-<h2 class="topored">Visited</h2>
-<% @lakessorted.each do |lake| %>
-  <% if lake.visited %>
+<h2 class="topored"></h2>
+<% @lakescols[0].each do |lake| %>
   <li>
     <span class="lakes"><%= link_to lake.name, lake %></span></br>
   </li>  
-  <% end %>
 <% end %>
+<h2 class="topored"></h2>
 </ul>
 
 <ul class="column2of3 trans">
-<h2 class="topored">Nameless | <%= link_to "info", note_path("nameless-lakes") %></h2>
-<% @lakessorted.each do |lake| %>
-  <% if lake.nameless %>
+<h2 class="topored"></h2>
+<% @lakescols[1].each do |lake| %>
   <li>
     <span class="lakes"><%= link_to lake.name, lake %></span></br>
   </li>  
-  <% end %>
 <% end %>
+<h2 class="topored"></h2>
 </ul>
 
 <ul class="column3of3 trans">
-<h2 class="topored">Unvisited</h2>
-<% @lakessorted.each do |lake| %>
-  <% unless lake.visited or lake.nameless %>
+<h2 class="topored"></h2>
+<% @lakescols[2].each do |lake| %>
   <li>
-    <span class="lakes"><%= lake.name %></span></br>
+    <span class="lakes"><%= link_to lake.name, lake %></span></br>
   </li>
-  <% end %>
 <% end %>
+<h2 class="topored"></h2>
 </ul>
 </div>

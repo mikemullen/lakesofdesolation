@@ -7,6 +7,7 @@ class LakesController < ApplicationController
   def index
     @lakes = Lake.all
     @lakessorted = @lakes.sort_by { |l| l.alphaname }
+    @lakescols = @lakessorted.in_groups(3, false) { |group| p group }
   end
 
   def create
